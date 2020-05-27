@@ -121,7 +121,7 @@ module.exports = class Database extends Observable {
     }
 
     // default value
-    if (field.default) {
+    if (field.default && typeof field.default != 'function') {
       column.defaultTo(field.default);
     }
 

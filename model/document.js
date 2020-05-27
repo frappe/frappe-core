@@ -526,7 +526,7 @@ module.exports = class BaseDocument extends Observable {
       }
       // child
       if (Array.isArray(value)) {
-        value.map(row => row.roundFloats());
+        value.map(row => row.roundFloats && row.roundFloats());
         continue;
       }
       // field
